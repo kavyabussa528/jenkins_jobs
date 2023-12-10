@@ -421,13 +421,15 @@
                         <groupId>org.codehaus.mojo</groupId>
                         <artifactId>cobertura-maven-plugin</artifactId>
                         <version>${cobertura.version}</version>
-			<dependency>
-				<groupId>com.sun</groupId>
-				<artifactId>tools</artifactId>
-				<version>1.6.0</version>
-				<scope>system</scope>
-				<systemPath>${env.JAVA_HOME}/lib/tools.jar</systemPath>
-			</dependency>
+						<dependencies>
+							<dependency>
+								<groupId>com.sun</groupId>
+								<artifactId>tools</artifactId>
+								<version>1.6.0</version>
+								<scope>system</scope>
+								<systemPath>${env.JAVA_HOME}/lib/tools.jar</systemPath>
+							</dependency>
+						</dependencies>
                         <configuration>
                             <formats>
                                 <format>html</format>
